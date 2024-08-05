@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transitions And Animations</title>
+
+    <style>
+      .animation {
+        height: 100px;
+        width: 100px;
+        background-color: red;
+        animation: infinite;
+       -webkit-animation: squareToCircle 2s 1s infinite alternate;
+        
+      }
+      
+
+      @-webkit-keyframes squareToCircle {
+        0% {
+            border-radius: 0 0 0 0 ;
+            background: coral;
+            transform: rotate(0deg);
+        }
+
+        25% {
+            border-radius: 50% 50% 0 0;
+            background: yellow;
+            transform: rotate(90deg);
+        }
+
+        75% {
+            border-radius: 50% 50% 50% 0;
+            background: black;
+            transform: rotate(135deg);
+        }
+
+        100% {
+      border-radius: 50% 50% 50% 50%;
+      background: blue;
+      transform: rotate(180deg);
+    }
+      }
+    </style>
+
+</head>
+<body>
+    <h1>Transitions And Animations</h1>
+    <div class="animation"></div>
+</body>
+</html>
